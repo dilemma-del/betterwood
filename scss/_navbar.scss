@@ -8,6 +8,9 @@
     font-weight: $font-weight-bold;
     color: $gray-900;
   }
+  form {
+    max-width: 400px;
+  }
   .navbar-nav {
     .nav-item {
       .nav-link {
@@ -35,6 +38,9 @@
       &:hover {
         color: $white;
       }
+    }
+    form {
+      max-width: 600;
     }
     .navbar-nav {
       .nav-item {
