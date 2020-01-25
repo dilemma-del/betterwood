@@ -9,3 +9,8 @@
 @import "./navbar.scss";
 @import "./masthead.scss";
 @import "./portfolio.scss";
+@import "./footer.scss";
+
+#moreColors {
+    background: url('../img/product-bg-rotated.jpg') no-repeat left 100%, url('../img/product-bg.jpg') no-repeat right 100%;
+}

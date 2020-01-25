@@ -28,13 +28,48 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container justify-content-center justify-content-md-between">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2" id="mainNav">
+    <div class="container mw-100"><!-- justify-content-center justify-content-md-between -->
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
        <img src="img/site-logo.png" >
       </a>
 
-      <form>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">О Нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Преимущества</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Галерея</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
+          </li>
+          <li class="nav-item d-block d-lg-none">
+            <form class="form-inline mw-100">
+              <div class="form-row">
+                <div class="input-group input-group-md mb-1">
+                    <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
+                    <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                      <i class="fas fa-2x fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+
+      <form class="form-inline d-none d-lg-   block">
         <div class="form-row">
           <div class="input-group input-group-md mb-1">
               <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
@@ -48,27 +83,31 @@
         </div>
       </form>
 
-      <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">О Нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Преимущества</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Галерея</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
-          </li>
-        </ul>
-      </div> -->
     </div>
   </nav>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light d-lg-none" id="bottomNav">
+    <div class="container mw-100 justify-content-center"><!-- justify-content-md-between -->
+      <!-- <a class="navbar-brand mr-auto d-none d-md-block">
+        some text 
+      </a> -->
+      <form class="form-inline">
+        <div class="form-row">
+          <div class="input-group input-group-sm mb-1">
+              <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
+              <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                <i class="fas fa-2x fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  
 
   <!-- Masthead -->
   <header class="masthead">
@@ -80,69 +119,8 @@
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">Высокое качество,стильная облицовка наружных стен с идеальным внешним видом и простота установки</p>
-          <form>
-            <div class="form-row">
-              <!-- <div class="col-lg-4">
-                <input type="text" class="form-control" placeholder="First name">
-              </div>
-              <div class="col-lg-4">
-                <input type="text" class="form-control" placeholder="Last name">
-              </div> -->
-              <div class="input-group input-group-lg mb-1">
-                  <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
-                  <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary" type="button" id="button-addon2">
-                    <i class="fas fa-2x fa-paper-plane"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-              </div> -->
-              <!-- <div class="col">
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
-              </div> -->
-            </div>
-            <!-- <div class="form-row">
-              <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
-              </div>
-            </div> -->
-            <!-- <div class="form-row mt-3">
-              <div class="col">
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
-              </div>
-            </div> -->
-          </form>
           <a class="btn btn-primary btn-xl js-scroll-trigger mt-4" href="#about">узнать больше</a>
         </div>
-        <!-- <div class="col-lg-8 align-self-baseline">
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
-        </div> -->
-        <!-- <div class="col-lg-12 align-self-baseline">
-          <form>
-            <div class="form-row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-              </div>
-              <div class="col">
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
-              </div>
-            </div>
-            <div class="form-row mt-3">
-              <div class="col">
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
-              </div>
-            </div>
-          </form>
-        </div> -->
       </div>
     </div>
   </header>
@@ -150,6 +128,7 @@
   <!-- About Section -->
   <section class="page-section bg-primary" id="about">
     <div class="container">
+        <img src="img/product-img.png" class="rounded float-right" alt="...">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">BETTERWOOD лидер по продаже и установке плит WPC&nbsp;&excl;</h2>
@@ -203,6 +182,9 @@
   <!-- Call to Action NEW Section -->
   <section class="page-section bg-dark text-white">
     <div class="container text-center">
+      <div>
+        <img src="img/product-img.png" class="rounded" alt="...">
+      </div>
       <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
       <a class="btn btn-light btn-xl" href="#">Download Now!</a>
     </div>
@@ -295,23 +277,13 @@
   </section>
 
   <!-- Call to Action Section -->
-  <section class="page-section bg-dark text-white">
+  <section class="page-section bg-primary text-info" id="moreColors">
     <div class="container text-center">
-      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <form>
-        <div class="form-row">
-          <div class="input-group input-group-lg mb-1">
-              <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
-              <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
-            <div class="input-group-append">
-              <button class="btn btn-outline-primary" type="button" id="button-addon2">
-                <i class="fas fa-2x fa-paper-plane"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </form>
-      <a class="btn btn-light btn-xl mt-3" href="#">Download Now!</a>
+      <div class="my-1">
+        <i class="fas fa-10x fa-palette text-info mb-4"></i>
+      </div>
+      <h2 class="mb-4 bg-gradient-primary p-3">Free Download at Start Bootstrap!</h2>
+      <a class="btn btn-success btn-xl mt-3" href="#">Download Now!</a>
     </div>
   </section>
 
@@ -325,7 +297,7 @@
           <p class="text-muted mb-5">Оставьте информацию и мы свяжемся с вами как можно скорее</p>
         </div>
       </div>
-      <form>
+      <form class="d-none d-lg-block">
         <div class="form-row">
           <div class="input-group input-group-lg mb-1">
               <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
@@ -353,7 +325,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-light py-5">
+  <footer class="bg-light py-5" id="mainFooter">
     <div class="container">
       <div class="small text-center text-muted">BetterWood</div>
     </div>

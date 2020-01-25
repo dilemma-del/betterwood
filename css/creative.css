@@ -9601,7 +9601,7 @@ hr.light {
 }
 
 #mainNav form {
-  max-width: 400px;
+  max-width: 350px;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -9620,6 +9620,12 @@ hr.light {
   color: #e65124 !important;
 }
 
+@media (min-width: 768px) {
+  #mainNav form {
+    max-width: 400px;
+  }
+}
+
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
@@ -9632,7 +9638,7 @@ hr.light {
     color: #fff;
   }
   #mainNav form {
-    max-width: 600;
+    max-width: 700px;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.7);
@@ -9744,4 +9750,18 @@ header.masthead h1 {
 
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+#mainFooter {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  #mainFooter {
+    margin-bottom: 0;
+  }
+}
+
+#moreColors {
+  background: url("../img/product-bg-rotated.jpg") no-repeat left 100%, url("../img/product-bg.jpg") no-repeat right 100%;
 }

@@ -9,7 +9,7 @@
     color: $gray-900;
   }
   form {
-    max-width: 400px;
+    max-width: 350px;
   }
   .navbar-nav {
     .nav-item {
@@ -29,6 +29,12 @@
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    // Base styling for the navbar - screen sizes greater than the medium breakpoint
+    form {
+      max-width: 400px;
+    }
+  }
   @include media-breakpoint-up(lg) {
     // Base styling for the navbar - screen sizes greater than the large breakpoint
     box-shadow: none;
@@ -40,7 +46,7 @@
       }
     }
     form {
-      max-width: 600;
+      max-width: 700px;
     }
     .navbar-nav {
       .nav-item {
