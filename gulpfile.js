@@ -12,6 +12,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+const  rtlcss = require('gulp-rtlcss');
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -98,6 +99,35 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+// CSS task
+function cssRtl() {
+  return gulp
+    .src("./scss/**/*.scss")
+    .pipe(plumber())
+    .pipe(sass({
+      outputStyle: "expanded",
+      includePaths: "./node_modules",
+    }))
+    .on("error", sass.logError)
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
+    .pipe(rename({
+      suffix: "-rtl"
+    }))
+    .pipe(rtlcss())
+    .pipe(gulp.dest("./css"))
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("./css"))
+    .pipe(browsersync.stream());
+}
+
 // JS task
 function js() {
   return gulp
@@ -123,10 +153,20 @@ function watchFiles() {
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
+// Watch files
+function watchFilesRtl() {
+  gulp.watch("./scss/**/*", cssRtl);
+  gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
+  gulp.watch("./**/*.html", browserSyncReload);
+}
+
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel([css, cssRtl], js));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+
+const buildRtl = gulp.series(vendor, gulp.parallel(cssRtl, js));
+const watchRtl = gulp.series(build, gulp.parallel(watchFilesRtl, browserSync));1
 
 // Export tasks
 exports.css = css;
@@ -136,3 +176,7 @@ exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
+
+exports.cssRtl = cssRtl;
+exports.watchRtl = watchRtl;
+exports.buildRtl = buildRtl;

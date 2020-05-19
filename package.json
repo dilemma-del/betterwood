@@ -4,6 +4,7 @@
     "version": "5.1.8",
     "scripts": {
         "start": "node_modules/.bin/gulp watch",
+        "start.rtl": "node_modules/.bin/gulp watchRtl",
         "build": "node_modules/.bin/gulp"
     },
     "description": "Creative is a stylish one page HTML theme for Bootstrap.",
@@ -45,6 +46,7 @@
         "gulp-header": "2.0.9",
         "gulp-plumber": "^1.2.1",
         "gulp-rename": "1.4.0",
+        "gulp-rtlcss": "^1.4.0",
         "gulp-sass": "4.0.2",
         "gulp-uglify": "3.0.2",
         "merge-stream": "2.0.0"

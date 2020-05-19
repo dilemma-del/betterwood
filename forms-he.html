@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="he">
 
 <head>
 
@@ -20,24 +20,30 @@
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
+  <style>
+    @import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+  </style>
+
   <!-- Theme CSS - Includes Bootstrap -->
-  <link href="css/creative.min.css" rel="stylesheet">
+  <link href="css/creative-rtl.min.css" rel="stylesheet">
+  
 
 </head>
 
-<body id="page-top">
+<body id="page-top" class="rtl" dir="rtl">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2" id="mainNav">
+    <div class="container mw-100"><!-- justify-content-center justify-content-md-between -->
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
        <img src="img/site-logo.png" >
       </a>
+
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">О Нас</a>
           </li>
@@ -50,10 +56,63 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
           </li>
+          <li class="nav-item d-block d-lg-none">
+            <form class="form-inline mw-100">
+              <div class="form-row">
+                <div class="input-group input-group-md mb-1">
+                    <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
+                    <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                      <i class="fas fa-2x fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
         </ul>
       </div>
+
+      <form class="form-inline d-none d-lg-block">
+        <div class="form-row">
+          <div class="input-group input-group-md mb-1">
+              <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
+              <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                <i class="fas fa-2x fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
     </div>
   </nav>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light d-lg-none" id="bottomNav">
+    <div class="container mw-100 justify-content-center"><!-- justify-content-md-between -->
+      <!-- <a class="navbar-brand mr-auto d-none d-md-block">
+        some text 
+      </a> -->
+      <form class="form-inline">
+        <div class="form-row">
+          <div class="input-group input-group-sm mb-1">
+              <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100">
+              <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                <i class="fas fa-2x fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  
 
   <!-- Masthead -->
   <header class="masthead">
@@ -65,7 +124,7 @@
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">Высокое качество,стильная облицовка наружных стен с идеальным внешним видом и простота установки</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">узнать больше</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger mt-4" href="#about">узнать больше</a>
         </div>
       </div>
     </div>
@@ -74,6 +133,7 @@
   <!-- About Section -->
   <section class="page-section bg-primary" id="about">
     <div class="container">
+        <img src="img/product-img.png" class="rounded float-right" alt="...">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">BETTERWOOD лидер по продаже и установке плит WPC&nbsp;&excl;</h2>
@@ -108,7 +168,7 @@
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+            <i class="fas fa-4x fa-recycle text-primary mb-4"></i>
             <h3 class="h4 mb-2">Экологичный</h3>
             <p class="text-muted mb-0">Экологически чистый и пригодный для вторичной переработки</p>
           </div>
@@ -124,6 +184,17 @@
     </div>
   </section>
 
+  <!-- Call to Action NEW Section -->
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <div>
+        <img src="img/product-img.png" class="rounded" alt="...">
+      </div>
+      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+      <a class="btn btn-light btn-xl" href="#">Download Now!</a>
+    </div>
+  </section>
+
   <!-- Portfolio Section -->
   <section id="portfolio">
     <div class="container-fluid p-0">
@@ -133,7 +204,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                 Орех темный
@@ -146,7 +217,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                Тиковое дерево
@@ -159,7 +230,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                 Орех
@@ -172,7 +243,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                 Клен Медиссон
@@ -185,7 +256,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                  Черное тиснение
@@ -198,7 +269,7 @@
             <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
             <div class="portfolio-box-caption p-3">
               <div class="project-category text-white-50">
-                Category
+                Цвет
               </div>
               <div class="project-name">
                 Ясень светлый
@@ -210,41 +281,56 @@
     </div>
   </section>
 
-
-  <!-- Call to Action Section  -->
-    <!-- <section class="page-section bg-dark text-white">
+  <!-- Call to Action Section -->
+  <section class="page-section bg-primary text-info" id="moreColors">
     <div class="container text-center">
-       <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a> -->
+      <div class="my-1">
+        <i class="fas fa-10x fa-palette text-info mb-4"></i>
+      </div>
+      <h2 class="mb-4 bg-gradient-primary p-3">Free Download at Start Bootstrap!</h2>
+      <a class="btn btn-success btn-xl mt-3" href="#">Download Now!</a>
     </div>
-  </section>   -->
+  </section>
 
   <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
-       <div class="row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <h2 class="mt-0">НУЖЕН СОВЕТ?</h2>
           <hr class="divider my-4">
           <p class="text-muted mb-5">Оставьте информацию и мы свяжемся с вами как можно скорее</p>
         </div>
-      </div> 
-      <div class="row">
+      </div>
+      <form class="d-none d-lg-block rtl">
+        <div class="form-row rtl">
+          <div class="input-group input-group-lg mb-1 rtl">
+              <input type="text" aria-label="Имя" placeholder="Имя" class="form-control h-100 rtl">
+              <input type="text" aria-label="Телефон" placeholder="Телефон" class="form-control h-100 rtl">
+            <div class="input-group-append rtl">
+              <button class="btn btn-outline-primary rtl" type="button" id="button-addon2">
+                <i class="fas fa-2x fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row mt-5">
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div> 050-9266363 </div>
+          <a class="d-block" href="tel: 050-9266363">050-9266363</a>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
           <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">info@betterwood.co.il</a>
+          <a class="d-block" href="mailto: info@betterwood.co.il">info@betterwood.co.il</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-light py-5">
+  <footer class="bg-light py-5" id="mainFooter">
     <div class="container">
       <div class="small text-center text-muted">BetterWood</div>
     </div>
